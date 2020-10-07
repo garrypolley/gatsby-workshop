@@ -35,7 +35,6 @@ const Hero = () => (
     >
       Schedule
     </h2>
-    Placeholder Text!
   </div>
 );
 
@@ -50,6 +49,10 @@ function IndexPage() {
             name
             title
             time
+            fields {
+              slug
+              url
+            }
           }
         }
       }

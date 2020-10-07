@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default function TalkCard({ talk }) {
-  const { name, title, time, avatar, link = "" } = talk;
+  const { name, title, time, avatar, fields } = talk;
+  const link = fields.url;
   return (
     <Link to={link}>
       <div className="flex items-center hover:bg-indigo-100 border px-4 py-2">
