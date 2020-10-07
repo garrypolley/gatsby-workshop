@@ -7,7 +7,7 @@ function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
   const NavLinks = [
     { href: "/", name: "Home" },
-    { href: "/tickets", name: "Tickets" },
+    { href: "/ticket", name: "Tickets" },
   ];
 
   return (
