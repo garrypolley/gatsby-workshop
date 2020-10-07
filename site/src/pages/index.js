@@ -1,7 +1,9 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Schedule from "../components/schedule";
 import sketchnoting from "../images/taking-notes.svg";
 
 const Hero = () => (
@@ -27,7 +29,10 @@ const Hero = () => (
       </div>
     </div>
     <br />
-    <h2 className="text-5xl font-extrabold text-blue-500 leading-9 tracking-tight font-inter">
+    <h2
+      className="text-5xl font-extrabold text-blue-500 leading-9 tracking-tight font-inter"
+      id="schedule"
+    >
       Schedule
     </h2>
     Placeholder Text!
@@ -35,6 +40,22 @@ const Hero = () => (
 );
 
 function IndexPage() {
+  const data = useStaticQuery(graphql`
+    query FetchSpeakers {
+      allSpeakersYaml {
+        edges {
+          node {
+            id
+            avatar
+            name
+            title
+            time
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Layout>
       <SEO
@@ -43,6 +64,7 @@ function IndexPage() {
       />
 
       <Hero />
+      <Schedule talks={data.allSpeakersYaml.edges} />
     </Layout>
   );
 }
