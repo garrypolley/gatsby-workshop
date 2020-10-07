@@ -27,8 +27,8 @@ export default function footer() {
           </p>
 
           <p>
-            <Link
-              to={data.site.siteMetadata.codeUrl}
+            <a
+              href={data.site.siteMetadata.codeUrl}
               className="text-gray-700 hover:text-gray-500 no-underline "
               target="_blank"
               rel="noopener noreferrer"
@@ -41,7 +41,7 @@ export default function footer() {
                   clipRule="evenodd"
                 />
               </svg>
-            </Link>
+            </a>
           </p>
         </nav>
       </div>
