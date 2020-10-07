@@ -5,7 +5,10 @@ import Logo from "../images/garry-and-child.jpeg";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
-  const NavLinks = [{ href: "/", name: "Home" }];
+  const NavLinks = [
+    { href: "/", name: "Home" },
+    { href: "/tickets", name: "Tickets" },
+  ];
 
   return (
     <nav className="bg-white">
