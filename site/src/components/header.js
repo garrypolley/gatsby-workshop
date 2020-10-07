@@ -1,7 +1,7 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React, { useState } from "react";
-import Logo from "../images/pencil-icon.png";
+import Logo from "../images/garry-and-child.jpeg";
 
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false);
