@@ -16,10 +16,6 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       .replace(/[^a-z0-9]+/g, "-")
       .replace(/(^-|-$)+/g, "")}`;
 
-    const url = CI
-      ? `https://garry-gatsbyworkshop.netlify.app/${path}`
-      : `http://localhost:8000/${path}`;
-
     createNodeField({
       node,
       name: `slug`,
@@ -29,7 +25,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `url`,
-      value: url,
+      value: `/${path}`,
     });
   }
 };

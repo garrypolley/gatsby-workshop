@@ -13,6 +13,16 @@ const TalkSection = ({ speaker }) => (
     <h2 className="text-4xl font-extrabold  tracking-tight font-inter p-4">
       with {speaker.name}
     </h2>
+    <img
+      className=" w-1/3 rounded-full inline"
+      src={"/" + speaker.avatar}
+      alt={`Avatar of ${speaker.name}`}
+    />
+    <p>
+      {speaker.description
+        ? speaker.description
+        : "More information will be available soon."}
+    </p>
   </div>
 );
 
@@ -27,6 +37,7 @@ function SpeakerPage({ data }) {
       />
 
       <TalkSection speaker={speaker} />
+      <br />
 
       <h2 className="text-5xl font-extrabold text-blue-500 leading-9 tracking-tight font-inter">
         All Schedule
@@ -42,6 +53,8 @@ export const query = graphql`
     speakersYaml(fields: { slug: { eq: $slug } }) {
       name
       title
+      description
+      avatar
     }
     allSpeakersYaml {
       edges {
