@@ -8,6 +8,8 @@ function Header({ siteTitle }) {
   const NavLinks = [
     { href: "/", name: "Home" },
     { href: "/ticket", name: "Tickets" },
+    { href: "/about", name: "About" },
+    { href: "/contact", name: "Contact" },
   ];
 
   return (
