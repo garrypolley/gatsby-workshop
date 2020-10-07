@@ -7,6 +7,7 @@ export default function footer() {
       site {
         siteMetadata {
           title
+          codeUrl
         }
       }
     }
@@ -23,12 +24,11 @@ export default function footer() {
             >
               &copy; {data.site.siteMetadata.title}
             </Link>
-            <span>{data.site.siteMetadata.description}</span>
           </p>
 
           <p>
-            <a
-              href="https://monica.dev/gatsbyworkshop"
+            <Link
+              to={data.site.siteMetadata.codeUrl}
               className="text-gray-700 hover:text-gray-500 no-underline "
               target="_blank"
               rel="noopener noreferrer"
@@ -41,7 +41,7 @@ export default function footer() {
                   clipRule="evenodd"
                 />
               </svg>
-            </a>
+            </Link>
           </p>
         </nav>
       </div>

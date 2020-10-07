@@ -5,6 +5,7 @@ module.exports = {
     description: `A cool conference app for testing Gatsby`,
     author: `@garrypolley`,
     siteUrl: `https://garry-gatsbyworkshop.netlify.app/`,
+    codeUrl: `https://github.com/garrypolley/gatsby-workshop`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
