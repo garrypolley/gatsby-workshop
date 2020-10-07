@@ -23,6 +23,7 @@ export default function footer() {
             >
               &copy; {data.site.siteMetadata.title}
             </Link>
+            <span>{data.site.siteMetadata.description}</span>
           </p>
 
           <p>
